@@ -1,4 +1,4 @@
-package ru.praktikum;
+package ru.praktikum.courier;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 import ru.praktikum.courier.CourierClientCreateAndAuthorization;
 import ru.praktikum.courier.DeleteCourier;
-import ru.praktikum.models.Courier;
+import ru.praktikum.models.courier.Courier;
 
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 import static ru.praktikum.constant.MessageConst.*;
 import static ru.praktikum.constant.UrlConst.BASE_URL;
 import static ru.praktikum.courier.CourierGenerator.randomCourier;
-import static ru.praktikum.models.CourierCreds.fromCourier;
+import static ru.praktikum.models.courier.CourierCreds.fromCourier;
 
 public class DeleteWrongCurrierIdTest
 {

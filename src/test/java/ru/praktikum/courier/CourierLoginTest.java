@@ -1,22 +1,21 @@
-package ru.praktikum;
+package ru.praktikum.courier;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
-import ru.praktikum.courier.CourierClientCreateAndAuthorization;
-import ru.praktikum.models.Courier;
+import ru.praktikum.models.courier.Courier;
 
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static ru.praktikum.constant.MessageConst.*;
 import static ru.praktikum.courier.CourierGenerator.randomCourier;
-import static ru.praktikum.models.CourierCreds.fromCourier;
-import static ru.praktikum.models.CourierCredsWithOutLogin.fromCourierWithOutLogin;
-import static ru.praktikum.models.CourierCredsWithOutPassword.fromCourierWithOutPassword;
+import static ru.praktikum.models.courier.CourierCreds.fromCourier;
+import static ru.praktikum.models.courier.CourierCredsWithOutLogin.fromCourierWithOutLogin;
+import static ru.praktikum.models.courier.CourierCredsWithOutPassword.fromCourierWithOutPassword;
 
-public class CourierLoginTest extends BeforeAndAfter
+public class CourierLoginTest extends BeforeAndAfterCourier
 {
 
     @Test

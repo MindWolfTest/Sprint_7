@@ -1,4 +1,4 @@
-package ru.praktikum.models;
+package ru.praktikum.models.courier;
 
 public class CourierWithOutPassword
 {

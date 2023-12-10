@@ -1,15 +1,10 @@
-package ru.praktikum;
+package ru.praktikum.courier;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import ru.praktikum.courier.CourierClientCreateAndAuthorization;
-import ru.praktikum.courier.DeleteCourier;
-import ru.praktikum.models.Courier;
+import ru.praktikum.models.courier.Courier;
 
 import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.apache.http.HttpStatus.SC_OK;
@@ -18,11 +13,10 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertEquals;
 import static ru.praktikum.constant.MessageConst.ID;
 import static ru.praktikum.constant.MessageConst.OK;
-import static ru.praktikum.constant.UrlConst.BASE_URL;
 import static ru.praktikum.courier.CourierGenerator.randomCourier;
-import static ru.praktikum.models.CourierCreds.fromCourier;
+import static ru.praktikum.models.courier.CourierCreds.fromCourier;
 
-public class CourierCorrentCreateTests extends BeforeAndAfter
+public class CourierCorrentCreateTests extends BeforeAndAfterCourier
 {
     @Test
     @DisplayName("Создание курьера")

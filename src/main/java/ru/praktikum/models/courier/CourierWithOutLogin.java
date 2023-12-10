@@ -1,4 +1,4 @@
-package ru.praktikum.models;
+package ru.praktikum.models.courier;
 
 public class CourierWithOutLogin
 {
@@ -10,7 +10,6 @@ public class CourierWithOutLogin
     {
         return password;
     }
-
 
 
     public CourierWithOutLogin withPassword(String password)

@@ -1,23 +1,21 @@
-package ru.praktikum;
+package ru.praktikum.courier;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
-import ru.praktikum.courier.CourierClientCreateAndAuthorization;
-import ru.praktikum.models.Courier;
-import ru.praktikum.models.CourierWithOutFirstName;
-import ru.praktikum.models.CourierWithOutLogin;
-import ru.praktikum.models.CourierWithOutPassword;
+import ru.praktikum.models.courier.Courier;
+import ru.praktikum.models.courier.CourierWithOutFirstName;
+import ru.praktikum.models.courier.CourierWithOutLogin;
+import ru.praktikum.models.courier.CourierWithOutPassword;
 
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static ru.praktikum.constant.MessageConst.*;
 import static ru.praktikum.courier.CourierGenerator.*;
-import static ru.praktikum.models.CourierCreds.fromCourier;
 
-public class CreateCourierWithOutNeededFieldsTest extends BeforeAndAfter
+public class CreateCourierWithOutNeededFieldsTest extends BeforeAndAfterCourier
 {
     @Test
     @DisplayName("Создание курьера без логина")

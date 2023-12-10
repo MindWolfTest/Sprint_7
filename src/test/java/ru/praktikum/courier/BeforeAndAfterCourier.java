@@ -1,16 +1,15 @@
-package ru.praktikum;
+package ru.praktikum.courier;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
-import ru.praktikum.courier.DeleteCourier;
 
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.junit.Assert.assertEquals;
 import static ru.praktikum.constant.UrlConst.BASE_URL;
 
-public class BeforeAndAfter
+public class BeforeAndAfterCourier
 {
     protected int id;
     @Before
