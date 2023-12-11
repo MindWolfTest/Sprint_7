@@ -12,8 +12,6 @@ public class Order
     private String comment;
     private String[] color;
 
-
-
     public String getFirstName()
     {
         return firstName;

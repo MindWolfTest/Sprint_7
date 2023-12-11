@@ -10,7 +10,6 @@ import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertEquals;
 import static ru.praktikum.constant.MessageConst.ID;
 import static ru.praktikum.constant.MessageConst.OK;
 import static ru.praktikum.courier.CourierGenerator.randomCourier;
@@ -19,7 +18,7 @@ import static ru.praktikum.models.courier.CourierCreds.fromCourier;
 public class CourierCorrentCreateTests extends BeforeAndAfterCourier
 {
     @Test
-    @DisplayName("Создание курьера")
+    @DisplayName("Создание курьера со случайными данными")
     @Description("Создание курьера со случайными данными")
     public void createCourier()
     {

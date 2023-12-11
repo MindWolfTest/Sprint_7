@@ -12,5 +12,6 @@ public class MessageConst
     public final static String TEXT_MESSAGE_FOR_LOGIN_INSUFFICIENT_DATA = "Недостаточно данных для входа";
     public final static String TEXT_MESSAGE_FOR_LOGIN_ACCOUNT_NOT_FOUND = "Учетная запись не найдена";
     public final static String TRACK = "track";
-
+    public final static String TEXT_MESSAGE_FOR_SEARCH_ORDER_INSUFFICIENT_DATA = "Недостаточно данных для поиска";
+    public final static String TEXT_MESSAGE_FOR_SEARCH_ORDER_WITH_WRONG_TRACK = "Заказ не найден";
 }

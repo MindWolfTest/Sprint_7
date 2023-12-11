@@ -1,6 +1,4 @@
 package ru.praktikum.models.order;
-import ru.praktikum.models.order.Order;
-
 
 public class OrderGenerator
 {

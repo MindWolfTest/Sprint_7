@@ -9,8 +9,6 @@ import static ru.praktikum.constant.UrlConst.ORDER_API;
 
 public class OrderCreate
 {
-
-
     @Step("Создание заказа {order}")
     public Response createNewOrder(Order order)
     {

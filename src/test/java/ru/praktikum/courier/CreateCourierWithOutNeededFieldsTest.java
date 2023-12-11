@@ -11,20 +11,17 @@ import ru.praktikum.models.courier.CourierWithOutPassword;
 
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.notNullValue;
 import static ru.praktikum.constant.MessageConst.*;
 import static ru.praktikum.courier.CourierGenerator.*;
 
 public class CreateCourierWithOutNeededFieldsTest extends BeforeAndAfterCourier
 {
     @Test
-    @DisplayName("Создание курьера без логина")
+    @DisplayName("Создание курьера без логина со случайными данными")
     @Description("Создание курьера без логина со случайными данными")
     public void createCourierWithoutLogin()
     {
         CourierWithOutLogin courierWithOutLogin = randomCourierWithOutLogin();
-
-        //System.out.println("без логина: " + courierWithOutLogin);
 
         CourierClientCreateAndAuthorization courierClientCreateAndAuthorization = new CourierClientCreateAndAuthorization();
 
@@ -35,13 +32,11 @@ public class CreateCourierWithOutNeededFieldsTest extends BeforeAndAfterCourier
     }
 
     @Test
-    @DisplayName("Создание курьера без пароля")
+    @DisplayName("Создание курьера без пароля со случайными данными")
     @Description("Создание курьера без пароля со случайными данными")
     public void createCourierWithoutPassword()
     {
         CourierWithOutPassword courierWithOutPassword = randomCourierWithOutPassword();
-
-        //System.out.println("без пароля: " + courierWithOutPassword);
 
         CourierClientCreateAndAuthorization courierClientCreateAndAuthorization = new CourierClientCreateAndAuthorization();
 
@@ -52,7 +47,7 @@ public class CreateCourierWithOutNeededFieldsTest extends BeforeAndAfterCourier
     }
 
     @Test
-    @DisplayName("Создание 2ух одинаковых курьеров")
+    @DisplayName("Создание 2ух одинаковых курьеров со случайными данными")
     @Description("Создание 2ух одинаковых курьеров со случайными данными")
     public void createCourier()
     {
@@ -72,7 +67,7 @@ public class CreateCourierWithOutNeededFieldsTest extends BeforeAndAfterCourier
     }
 
     @Test
-    @DisplayName("Создание курьера без имени")
+    @DisplayName("Создание курьера без имени со случайными данными")
     @Description("Создание курьера без имени со случайными данными")
     public void createCourierWithOutFirstName()
     {

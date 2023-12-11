@@ -19,7 +19,7 @@ public class CourierLoginTest extends BeforeAndAfterCourier
 {
 
     @Test
-    @DisplayName("Авторизация курьера")
+    @DisplayName("Авторизация курьера с корректно заполненными данными")
     @Description("Авторизация курьера с корректно заполненными данными")
     public void loginCourier()
     {
@@ -89,6 +89,4 @@ public class CourierLoginTest extends BeforeAndAfterCourier
         loginResponse.then().assertThat().statusCode(SC_NOT_FOUND)
                 .and().body(MESSAGE, equalTo(TEXT_MESSAGE_FOR_LOGIN_ACCOUNT_NOT_FOUND));
     }
-
-
 }

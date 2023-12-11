@@ -6,14 +6,10 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.Before;
 import org.junit.Test;
-import ru.praktikum.courier.CourierClientCreateAndAuthorization;
-import ru.praktikum.courier.DeleteCourier;
-import ru.praktikum.models.courier.Courier;
 
+import ru.praktikum.models.courier.Courier;
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertEquals;
 import static ru.praktikum.constant.MessageConst.*;
 import static ru.praktikum.constant.UrlConst.BASE_URL;
 import static ru.praktikum.courier.CourierGenerator.randomCourier;
@@ -29,31 +25,29 @@ public class DeleteWrongCurrierIdTest
     }
 
     @Test
-    @DisplayName("Удаление курьера")
+    @DisplayName("Удаление не существующего курьера")
     @Description("Удаление не существующего курьера")
     public void deleteWrongCourierId()
     {
         DeleteCourier courierClientDelete = new DeleteCourier();
         Response responseDelete = courierClientDelete.deleteCourier(12);
-        //assertEquals("Неверный статус код при удалении курьера", SC_NOT_FOUND, responseDelete.statusCode());
         responseDelete.then().assertThat().statusCode(SC_NOT_FOUND)
                 .and().body(MESSAGE, equalTo(TEXT_MESSAGE_NOT_FOUND));
     }
 
     @Test
-    @DisplayName("Удаление курьера")
+    @DisplayName("Удаление курьера без id")
     @Description("Удаление курьера без id")
     public void deleteNullCourierId()
     {
         DeleteCourier courierClientDelete = new DeleteCourier();
         Response responseDelete = courierClientDelete.deleteCourier(null);
-        //assertEquals("Неверный статус код при удалении курьера без указания id", SC_BAD_REQUEST, responseDelete.statusCode());
         responseDelete.then().assertThat().statusCode(SC_BAD_REQUEST)
                 .and().body(MESSAGE, equalTo(TEXT_MESSAGE_FOR_DELETE_INSUFFICIENT_DATA));
     }
 
     @Test
-    @DisplayName("Удаление курьера")
+    @DisplayName("Удаление созданного курьера")
     @Description("Удаление созданного курьера")
     public void deleteCurrentCourier()
     {
